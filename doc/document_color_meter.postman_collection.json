@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "2a38c3b6-328d-44eb-a4bd-53bc5a46ec68",
+		"name": "document_color_meter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/measure_color",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "binarize",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "whiteThreshold",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "blackThreshold",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "grayThreshold",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/hector/Dev/personal/github.com/Eitol/document_color_meter/api_front/core/test_util/testdata/valid_image.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/measure_color",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"measure_color"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

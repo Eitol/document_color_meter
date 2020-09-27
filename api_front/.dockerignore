@@ -1,0 +1,7 @@
+venv
+.idea
+*.pyc
+*.env
+*.log
+.DS_STORE
+Dockerfile

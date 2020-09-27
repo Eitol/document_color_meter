@@ -1,0 +1,8 @@
+googleapis-common-protos==1.51.0
+grpcio==1.28.1
+grpcio-status==1.28.1
+grpcio-tools==1.28.1
+pdf2image==1.13.1
+Pillow==7.1.2
+protobuf==3.11.3
+six==1.14.0

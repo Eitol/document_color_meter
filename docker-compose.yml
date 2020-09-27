@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api_front:
+    build: api_front
+    ports:
+      - "8080:8080"
+    environment:
+      BINARIZER_HOST: "binarizer:50053"
+      IMAGE_CONVERSION_HOST: "pdf_to_image:50052"
+  pdf_to_image:
+    build: pdf_to_image
+    ports:
+      - "50052:50052"
+  binarizer:
+    build: binarizer
+    ports:
+      - "50053:50053"

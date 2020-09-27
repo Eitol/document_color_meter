@@ -1,0 +1,14 @@
+{
+  "Document": {
+    "Name": "Test.PDF",
+    "Pages": 6
+  },
+  "JobStatus": "SUCCEEDED",
+  "Pages": [
+    {
+      "Page1": 20,
+      "Page2": 0,
+      "Page3": 50
+    }
+  ]
+}

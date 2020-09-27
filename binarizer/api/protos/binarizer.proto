@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.github.eitol.document_color_meter.binarizer";
+option java_outer_classname = "BinarizerProto";
+option go_package = ".;binarizer";
+package binarizer;
+
+enum BinarizationMethod {
+    UNDEFINED = 0;
+    SAUVOLA = 1;
+    NIBLACK = 2;
+    OTSU = 3;
+}
+
+message BinarizeRequest {
+    repeated bytes images = 1;
+    BinarizationMethod binarization_method = 2;
+}
+
+message BinarizeResponse {
+    repeated bytes images = 1;
+    string out_path = 2;
+}
+
+
+service Binarizer {
+    rpc Binarize (BinarizeRequest) returns (BinarizeResponse) {
+    }
+}

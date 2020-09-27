@@ -1,0 +1,24 @@
+syntax = "proto3";
+package protos;
+
+option go_package = ".;pdf_to_image_protos";
+
+enum ImageFormat {
+  UNKNOWN = 0;
+  JPEG = 1;
+  PNG = 2;
+  SVG = 3;
+}
+
+message PdfToImageRequest {
+  bytes file = 1;
+  ImageFormat format = 2;
+}
+
+message PdfToImageResponse {
+  repeated bytes pages = 1;
+}
+
+service PdfToImageService {
+  rpc Convert (PdfToImageRequest) returns (PdfToImageResponse) {}
+}
